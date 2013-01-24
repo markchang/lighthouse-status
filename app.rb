@@ -19,6 +19,7 @@ get '/' do
   # "Open CAT-1 tickets %d" % new_tickets.count
   erb :index, :locals => { 
     :cat_1_count => open_cat_1.count,
+    :cat_2_count => open_cat_2.count,
     :open_features_count => open_features.count,
     :new_ticket_count => new_tickets.count,
     :latest_ticket => tickets.first
