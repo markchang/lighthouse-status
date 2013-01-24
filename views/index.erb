@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="status.css"> 
+        <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <div id="content">
+        <div id="heading">Studio Tickets</div>
+        <div id="stats">
+          <div class="row">
+            <div class="label">Open CAT-1</div>
+            <div class="value"><%= cat_1_count %></div>
+          </div>
+          <div class="row">
+            <div class="label">Open Features</div>
+            <div class="value"><%= open_features_count %></div>
+          </div>
+          <div class="row">
+            <div class="label">New Tickets</div>
+            <div class="value"><%= new_ticket_count %></div>
+          </div>
+          <div id="latest_title">Most recent</div>
+          <div id="most_recent">
+            <div id="author_name"><%= latest_ticket.creator_name %></div> <div id="title"><%= latest_ticket.title %></div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

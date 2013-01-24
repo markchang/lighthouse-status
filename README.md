@@ -1,1 +1,1 @@
-Bug tracker status for lighthouse. Meant for big ambient displays.
+Bug tracker Sinatra app for lighthouse. Meant for big ambient displays.

@@ -21,6 +21,8 @@ GEM
     rack (1.5.0)
     rack-protection (1.3.2)
       rack
+    shotgun (0.9)
+      rack (>= 1.0)
     sinatra (1.3.3)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
@@ -41,6 +43,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  shotgun
   sinatra
   taskmapper
   taskmapper-lighthouse

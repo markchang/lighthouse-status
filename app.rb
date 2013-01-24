@@ -3,7 +3,7 @@ require 'taskmapper'
 require 'taskmapper-lighthouse'
 
 get '/' do
-  lighthouse = TaskMapper.new(:lighthouse, {:token => "6c479cc509fba68adcc74d0b69e84dde10078a66",:account => "edx"})
+  lighthouse = TaskMapper.new(:lighthouse, {:token => ENV['LIGHTHOUSE_KEY'],:account => "edx"})
   studio = lighthouse.projects[0]
 
   # get all tickets that have tags
@@ -16,5 +16,11 @@ get '/' do
   open_features = tagged_tickets.select {|t| t.tag.include? "feature" and  (t.state == "open" or t.state == "reviewed")}
   new_tickets = tickets.select {|t| t.state == "new"}
 
-  "Open CAT-1 tickets %d" % new_tickets.count
+  # "Open CAT-1 tickets %d" % new_tickets.count
+  erb :index, :locals => { 
+    :cat_1_count => open_cat_1.count,
+    :open_features_count => open_features.count,
+    :new_ticket_count => new_tickets.count,
+    :latest_ticket => tickets.first
+  }
 end
