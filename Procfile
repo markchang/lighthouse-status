@@ -1,1 +1,1 @@
-web: bundle exec shotgun -p 4567 app.rb
+web: bundle exec shotgun app.rb -p $PORT
